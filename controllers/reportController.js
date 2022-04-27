@@ -1,9 +1,10 @@
+'use strict'
 const reportServices = require('../services/reportServices')
 
 const reportController = {
   createReport: async function (req, res) {
     try {
-      const existingReport = await reportServices.data(
+      const existingReport = await reportServices.getReport(
         req.body.marketID,
         req.body.cmdtyID
       )
@@ -37,7 +38,7 @@ const reportController = {
   },
   getReport: async function (req, res) {
     try {
-      const report = await reportServices.report(req.query.id)
+      const report = await reportServices.getReportById(req.query.id)
       if (report.length > 0) {
         return res.status(200).json(report[0])
       } else {

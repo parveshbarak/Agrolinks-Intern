@@ -1,3 +1,4 @@
+'use strict'
 const Report = require('../models/reportModel')
 
 const reportServices = {
@@ -11,7 +12,7 @@ const reportServices = {
     }
     return data
   },
-  data: async function (marketID, cmdtyID) {
+  getReport: async function (marketID, cmdtyID) {
     let data
     try {
       data = await Report.find({ marketID: marketID, cmdtyID: cmdtyID })
@@ -53,8 +54,10 @@ const reportServices = {
       console.log(e.message)
     }
   },
-  report: async function (reportID) {
-    const data = await Report.find({ _id: reportID }).select("-convFctr")
+  getReportById: async function (reportID) {
+    const data = await Report.find({ _id: reportID }).select('-convFctr')
+    let price = data[0].price.toFixed(3)
+    data[0].price = price;
     return data
   },
 }
