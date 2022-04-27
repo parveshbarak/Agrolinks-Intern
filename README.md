@@ -1,4 +1,4 @@
-# AgriLinks Intern Assignment
+# 1. AgriLinks Intern Assignment
 
 > ## Problem Statement:
 
@@ -17,16 +17,16 @@ You need to combine the reports per market-commodity by calculating the average 
 
 <br>
 
-## Clone the project
+## 1.1. Clone the project
 
 ```bash
-git clone https://github.com/POOL4T7/shop.git
-cd shop
+git clone git@github.com:parveshbarak/Agrolinks-Intern.git
+cd Agrolinks
 ```
 
 <br>
 
-## Install dependencies for server
+## 1.2. Install dependencies for server
 
 ```bash
 # Install dependencies
@@ -37,7 +37,7 @@ npm i
 
 <br>
 
-## Before starting the server make a .env file on root folder and add your constant value
+## 1.3. Before starting the server make a .env file on root folder and add your constant value
 
 - NODE_ENV
 - PORT
@@ -45,7 +45,7 @@ npm i
 
 <br>
 
-## Run the server
+## 1.4. Run the server
 
 ```bash
 # make sure you are on root directory of project
@@ -109,7 +109,15 @@ npm start
         "__v": 0
     }
   ```
+> # Test Covergae
+<br>
 
-  # Agrolinks-Intern
-# Agrolinks-Intern
-# Agrolinks-Intern
+
+> ## To Run the Unit tests
+
+```bash
+# make sure you are on root directory of project
+npm test
+# Server runs on http://localhost:PORT
+
+```
